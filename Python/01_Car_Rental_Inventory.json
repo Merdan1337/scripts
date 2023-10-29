@@ -1,0 +1,13 @@
+{
+    "cars":[
+     {"id": 1, "brand": "Toyota", "model": "Corolla", "price": 50},
+     {"id": 2, "brand": "Honda", "model": "Civic", "price": 60},
+     {"id": 3, "brand": "Mercedes", "model": "Benz", "price": 35},
+     {"id": 4, "brand": "BMW", "model": "Coupe", "price": 55},
+     {"id": 5, "brand": "Seat", "model": "Ibiza", "price": 20},
+     {"id": 6, "brand": "Skoda", "model": "Octavia", "price": 76},
+     {"id": 7, "brand": "Smart", "model": "Brabus", "price": 41},
+     {"id": 8, "brand": "Lada", "model": "Tiger", "price": 28}
+     ]
+ }
+ 
