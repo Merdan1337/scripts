@@ -16,7 +16,7 @@ with open("menu.json", mode = "r", encoding="UTF-8") as file:
     menu = json.load(file)
 
 
-# 2 Greetingx
+# 2 Greeting
 greeting = "\nWillkommen beim Leckerschmecker Restaurant"
 print(greeting)
 print("~" * len(greeting))
@@ -78,19 +78,4 @@ print(receipt_text)
 # 7 Quittung abspeichern in .txt datei
 with open("quittung.txt", mode="w", encoding= "UTF-8") as file:
     file.write(receipt_text)
-
-# 
-# import random
-# template = "irgwas"
-# i = int(random.random()*100)
-
-# # Quittungen im ordner abspeichern
-# folder = Path("quittungen")
-# folder.mkdir(exist_ok=True)
-# file = Path(f"./quittungen/quittung_von_{last_name}.txt")
-# file.write_text(template.format(receipt_text=receipt_text, i=i), encoding="UTF-8")
-
-
-
-
 
