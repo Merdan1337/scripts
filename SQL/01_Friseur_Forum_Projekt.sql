@@ -91,7 +91,7 @@ FROM benutzer AS b INNER JOIN fach_forum_beitrag as bei
 ON b.ID_benutzer = bei.erstellt_von
 ORDER BY b.nachname;
 
-
+-- Abrufen mit JOIN
 SELECT b.vorname, b.nachname, bei.beitrag, bei.erstellt_von, b.ID_benutzer
 FROM benutzer AS b INNER JOIN fach_forum_beitrag as bei  
 ON b.ID_benutzer = bei.erstellt_von
