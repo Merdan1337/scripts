@@ -1,9 +1,8 @@
-# Eine Klasse mit 5 Klassenattributen, 3 davon privat mit setter & getter
+# A Class with 5 classattributes, 3 of them with private setter & getter
 
 x = None 
 
-
-# Klasse mit __init__ Konstruktor
+# Class with constructor
 class Haustier:
     def __init__(self, *args):
         self.name = args[0]
@@ -12,7 +11,7 @@ class Haustier:
         self.__rasse = ""
         self.__merkmale = ""
 
-# get set
+# Get & Set
     def get_alter(self):
         return self.__alter
 
@@ -36,7 +35,7 @@ class Haustier:
         print(f"Das Haustier {self.name} hat die Farbe {self.farbe} und ist schon {self.__alter} Jahre alt. Die Rasse ist {self.__rasse} und das besondere Merkmale am Haustier ist: {self.__merkmale}")
 
 
-# Instanz des Haustiers
+# Instance of the class
 x = Haustier("Rufus", "Rosa")
 x.set_alter(4)
 x.set_rasse("Nacktmul")
