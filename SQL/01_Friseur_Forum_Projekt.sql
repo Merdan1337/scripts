@@ -50,48 +50,48 @@ PRIMARY KEY (ID_benutzer, ID_FaFo)
 );
 
 
--- Erstellen eines Nutzerprofils von Friseuren per SQL-Statement
+-- Create a new user
 INSERT INTO benutzer (vorname,nachname, benutzer_alter, podologie, profil_erstellt) VALUES ('Merdan', 'Xzel', 27, 1, NOW());
 
 
--- Erstellen eines Beitrags in dem Friseurforum per SQL-Statement
+-- Create a new post 
 INSERT INTO fach_forum_beitrag (erstellt_von, erstellt_am, beitrag) VALUES (5, NOW(), 'Soll ich nur noch halbtags öffnen, mangels Kundschaft?');
 
 
--- Erstellen einer Antwort zu den Beiträgen im Friseurforum per SQL-Statement
+-- Create an answer to an existing post
 INSERT INTO fach_forum_antwort (ID_benutzer, ID_FaFo, beliebtheit_sterne, antwort, erstellt_am) VALUES (6, 9, 4, 'Für eine Preiserhöhung ist jetzt nicht die Zeit. Später mal ;)', NOW());
 
 
--- Das Attribut Podologie ist nicht notwendig und soll entfernt werden
+-- The attribute podologie is not necessary anymore and needs to be removed
 ALTER TABLE benutzer DROP COLUMN podologie;
 SELECT * FROM benutzer;
 
 
--- Attribute die in der Tabelle fehlen ergänzen
+-- Multiple attributes are missing 
 ALTER TABLE benutzer ADD ausbildung BOOLEAN, 
-					 ADD herrenfriseur BOOLEAN, 
+                     ADD herrenfriseur BOOLEAN, 
                      ADD damenfriseur BOOLEAN, 
                      ADD friseurmeister BOOLEAN, 
                      ADD wettbewerbsqualifikation BOOLEAN, 
                      ADD datum_aenderung DATE;
 
 
--- Tabellenanpassung
+-- Adjusting tables
 ALTER TABLE benutzer MODIFY vorname VARCHAR(30) NOT NULL;
 ALTER TABLE benutzer MODIFY nachname VARCHAR(50) NOT NULL;
 
 
--- Tabellenbearbeitung
+-- Editing tables
 UPDATE benutzer SET ausbildung = TRUE WHERE ID_benutzer = 3;
 DELETE FROM benutzer WHERE vorname like '%ven%';
 
--- Abrufen
+-- Inner Join
 SELECT b.vorname, b.nachname, bei.beitrag, bei.erstellt_von, b.ID_benutzer
 FROM benutzer AS b INNER JOIN fach_forum_beitrag as bei  
 ON b.ID_benutzer = bei.erstellt_von
 ORDER BY b.nachname;
 
--- Abrufen mit JOIN
+-- Inner Join & Join
 SELECT b.vorname, b.nachname, bei.beitrag, bei.erstellt_von, b.ID_benutzer
 FROM benutzer AS b INNER JOIN fach_forum_beitrag as bei  
 ON b.ID_benutzer = bei.erstellt_von
