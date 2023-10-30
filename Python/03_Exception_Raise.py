@@ -1,6 +1,6 @@
-# num2 soll größer als 5 sein
+# num2 should be higher than 5 
 
-# 1. Variante
+# Solution 1
 num1 = int (input('Enter Num1: '))
 num2 = int (input('Enter Num2: '))
 
@@ -13,7 +13,7 @@ else:
     print("Num2 muss größer als 5 sein")
 
 
-# 2. Variante
+# Solution 2
 try:
     num1 = int (input('Enter Num1: '))
     num2 = int (input('Enter Num2: '))
@@ -29,8 +29,6 @@ else:
     total = num1 + num2
     print(total)
     print("Num2 muss größer als 5 sein")
-
-
 
 
 
