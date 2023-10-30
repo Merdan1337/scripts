@@ -58,7 +58,7 @@ while True:
     wishes_list.append(wish_id)
 
 
-# 6 Quittung
+# 6 Receipt
 receipt_text = f"\nQuittung für Gast {first_name} {last_name}\n"
 receipt_text += "~" * 30 + "\n"
 
@@ -75,7 +75,7 @@ receipt_text += "Thank you for your visit"
 print(receipt_text)
 
 
-# 7 Quittung abspeichern in .txt datei
+# 7 Save Receipt as .txt file
 with open("quittung.txt", mode="w", encoding= "UTF-8") as file:
     file.write(receipt_text)
 
