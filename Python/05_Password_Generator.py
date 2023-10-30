@@ -43,6 +43,6 @@ everything = loopingtext + generated_password
 print(everything)
 
 
-# generates passwort.txt file with generated password in it
+# generates password.txt file with new generated password in it
 with open("password.txt", mode= "w", encoding= "UTF-8") as file:
     file.write(everything)
