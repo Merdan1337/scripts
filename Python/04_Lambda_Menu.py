@@ -1,4 +1,4 @@
-# Dynamisches Menü mit lambda
+# Dynamic Menu with lambda
 # Import library
 from tkinter import *
 
@@ -8,7 +8,7 @@ class Window(Frame):
         Frame.__init__(self, master)
         self.master = master
         
-        # Menu erzeugen
+        # Generate Menu 
         menu = Menu(self.master)
         
         
@@ -31,21 +31,22 @@ class Window(Frame):
         menu.add_cascade(label="Help")
         
         self.master.config(menu=menu)
-         
+
+    # Exit program function
     def exitProgram(self):
-        print("Fenster Schliessen...")
+        print("Closing Window...")
         exit()
         
-    
+    # Open file function
     def fileMenuFunctions(self, action, number):
         print(f"action{number}:{action}")
-        # open File
+        
         
 
 root = Tk()
-# neue Instanz von Window erstellt
+# New instance of the window
 app = Window(root)
 
-# startet ein Prozess (Events abfangen protokollieren ...) 
+# Starts the process  
 root.mainloop()
         
