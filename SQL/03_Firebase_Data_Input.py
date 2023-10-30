@@ -11,12 +11,12 @@ os.chdir(Path(__file__).parent)
 # Use a service account
 cred = credentials.Certificate("path/serviceAccountKey.json")
 
-# Initialisierung mit priv Schlüssel cred
+# Initialize with private key cred
 app = firebase_admin.initialize_app(cred)
 
-# Zugriff auf den Firestore
+# Access to the firestore client
 db = firestore.client()
 
 # Data input
-data = {"name":"Merdan", "age": 27, "Geschlecht": "männlich"}
+data = {"name":"Merdan", "age": 27, "gender": "male"}
 db.collection("people").add(data)
