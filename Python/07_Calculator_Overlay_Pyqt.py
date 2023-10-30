@@ -4,14 +4,14 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QPushButton, QGridLayout
 
-# App erzeugen
+# Generate app 
 app = QApplication(sys.argv)
 
-# Top-Level Window erzeugen
+# Generate Top-Level Window 
 window = QWidget()
 window.setWindowTitle("Taschenrechner von Merdan")
 
-# Buttons erzeugen
+# Generate Buttons 
 btn_1 = QPushButton("1")
 btn_2 = QPushButton("2")
 btn_3 = QPushButton("3")
@@ -48,19 +48,19 @@ btn_punkt = QPushButton(".")
 btn_istgleich = QPushButton("=")
 
 
-# Farbe
+# Color
 gruen = QPalette()
 gruen.setColor(QPalette.ButtonText, Qt.green)
 
 
-# QLine mit default Wert 0
+# QLine default 0
 eingabe = QLineEdit("0")
 
 btn_istgleich.setPalette(gruen)
 
 
 
-# Layout definieren
+# Define Layout
 layout = QGridLayout()
 
 # First Row QLineEdit 
@@ -112,14 +112,12 @@ layout.addWidget(btn_plus, 5, 6)
 
 app.setStyle('Black')  # 'Fusion', 'windows', 'windowsVista', 'Machintosh'
 
-# Layout setzen mit methode setLayout()
+# Set Layout with method setLayout()
 window.setLayout(layout)
 
-# Zeigt das Fenster
+# Show the window
 window.show()
 
-# App ausführen und einen Loop für die User Interaktionen starten
+# Execute app in a loop
 app.exec()
-
-
 
