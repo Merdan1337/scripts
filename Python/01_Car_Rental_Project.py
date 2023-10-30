@@ -18,7 +18,7 @@ with open("01_Car_Rental_Inventory.json", mode ="r", encoding="UTF-8") as file:
 
 
 # 2 Greet
-greeting = "\nWillkommen bei Autoverkauf Feser"
+greeting = "\nWelcome to Car Rental!"
 print(greeting)
 print("~" * len(greeting))
 print()
@@ -57,7 +57,7 @@ while True:
     wishes_list.append(wish_id)
 
 
-# 6 Quittung
+# 6 Receipt
 receipt_text = f"\nQuittung für Gast {first_name} {last_name}\n"
 receipt_text += "~" * len(receipt_text) + "\n"
 
@@ -73,6 +73,6 @@ receipt_text += "Thank you for your visit"
 print(receipt_text)
 
 
-# 7 Quittung abspeichern als .txt datei
+# 7 Safe Receipt as .txt file
 with open(f"receipt_for_{last_name}_{first_name}.txt", mode= "w", encoding= "UTF-8") as file:
         file.write(receipt_text)
